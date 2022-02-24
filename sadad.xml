@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="3.9" type="plugin" group="vmpayment" method="upgrade">
+
+    <name>Sadad Gateway for VirtueMart</name>
+    <description>PLG_J2STORE_SADAD</description>
+    <version>2.0</version>
+    <author>Developer: Faradadeh.com</author>
+    <authorUrl>https://faradadeh.com/</authorUrl>
+    <authorEmail>info@faradadeh.com</authorEmail>
+    <creationDate>February 2022</creationDate>
+    <copyright>Copyright (C) 2022 SADAD</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GPLv2 or later</license>
+
+    <files>
+        <filename plugin="sadad">sadad.php</filename>
+        <folder>helper</folder>
+        <folder>sadad</folder>
+    </files>
+
+    <vmconfig>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="/administrator/components/com_virtuemart/elements">
+                <field type="text" name="merchant" label="شماره پذیرنده" description=""/>
+                <field type="text" name="terminal" label="ترمینال" description=""/>
+                <field type="text" name="key" label="کلید ترمینال" description=""/>
+                <field name="currency" type="list" default="rial" label="واحد پولی فروشگاه" description="">
+                    <option value="rial">ریال</option>
+                    <option value="toman">تومان</option>
+                </field>
+            </fieldset>
+        </fields>
+    </vmconfig>
+
+</extension>
